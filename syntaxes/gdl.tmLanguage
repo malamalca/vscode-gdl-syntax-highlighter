@@ -49,7 +49,7 @@
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>(?i)(?&lt;=^|\s)(LINE2|RECT2|POLY2_A|POLY2_B(\{[2-4]\})?|POLY2_|POLY2|ARC2|CIRCLE2|SPLINE2[A]?|PICTURE2(\{2\})?|TEXT2|RICHTEXT2)(?=$|\s)</string>
+			<string>(?i)(?&lt;=^|\s)(LINE2|RECT2|POLY2_A|POLY2_B(\{[2-5]\})?|POLY2_|POLY2|ARC2|CIRCLE2|SPLINE2[A]?|PICTURE2(\{2\})?|TEXT2|RICHTEXT2)(?=$|\s)</string>
 			<key>name</key>
 			<string>keyword.gdl.shape.2D</string>
 		</dict>
@@ -85,7 +85,7 @@
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>(?i)(?&lt;=^|\s)(VERT|TEVE|VECT|EDGE|PGON|PIPG|COOR|BODY|BASE)(?=$|\s)</string>
+			<string>(?i)(?&lt;=^|\s)(VERT(\{[2]\})?|TEVE|VECT|EDGE|PGON|PIPG|COOR|BODY|BASE)(?=$|\s)</string>
 			<key>name</key>
 			<string>keyword.gdl.shape.3D.primitive</string>
 		</dict>
@@ -145,7 +145,7 @@
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>(?i)(?&lt;=^|\s)(UI_(DIALOG|PAGE|CURRENT_PAGE|BUTTON|SEPARATOR|GROUPBOX|PICT|STYLE|OUTFIELD|INFIELD|PICT_BUTTON(\{[2-3]\})?|RADIOBUTTON|TOOLTIP))(?=$|\s)</string>
+			<string>(?i)(?&lt;=^|\s)(UI_(DIALOG|PAGE|CURRENT_PAGE|BUTTON|SEPARATOR|GROUPBOX|PICT|STYLE|OUTFIELD|INFIELD(\{[2-3]\})?|PICT_BUTTON|RADIOBUTTON|TOOLTIP))(?=$|\s)</string>
 			<key>name</key>
 			<string>keyword.gdl.nongeo.ui</string>
 		</dict>
@@ -187,9 +187,15 @@
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>(?i)(?&lt;=^|\s|\^|\*\*|\/|\+|\-|\=|\&lt;|\&gt;|\&lt;\=|\&gt;\=|\&lt;\&gt;|\#)(GLOB_SCRIPT_TYPE|T~|GLOB_CONTEXT|GLOB_SCALE|A_|GLOB_DRAWING_BGD_PEN|GLOB_NORTH_DIR|U~|GLOB_WORLD_ORIGO_OFFSET_X|GLOB_WORLD_ORIGO_OFFSET_Y|GLOB_MODPAR_NAME|GLOB_UI_BUTTON_ID|GLOB_CUTPLANES_INFO|GLOB_STRUCTURE_DISPLAY)(?=$|\s|\^|\*\*|\/|\+|\-|\=|\&lt;|\&gt;|\&lt;\=|\&gt;\=|\&lt;\&gt;|\#)</string>
+			<string>(?i)(?&lt;=^|\s|\^|\*\*|\/|\+|\-|\=|\&lt;|\&gt;|\&lt;\=|\&gt;\=|\&lt;\&gt;|\#)(GLOB_SCRIPT_TYPE|T~|GLOB_CONTEXT|GLOB_SCALE|A_|GLOB_DRAWING_BGD_PEN|U~|GLOB_WORLD_ORIGO_OFFSET_X|GLOB_WORLD_ORIGO_OFFSET_Y|GLOB_MODPAR_NAME|GLOB_UI_BUTTON_ID|GLOB_CUTPLANES_INFO|GLOB_STRUCTURE_DISPLAY)(?=$|\s|\^|\*\*|\/|\+|\-|\=|\&lt;|\&gt;|\&lt;\=|\&gt;\=|\&lt;\&gt;|\#)</string>
 			<key>name</key>
 			<string>keyword.gdl.globals.general</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>(?i)(?&lt;=^|\s|\^|\*\*|\/|\+|\-|\=|\&lt;|\&gt;|\&lt;\=|\&gt;\=|\&lt;\&gt;|\#)(GLOB_NORTH_DIR|GLOB_VIEW_TYPE|GLOB_PROJECT_LONGITUDE|GLOB_PROJECT_LATITUDE|GLOB_FRAME_NR|GLOB_EYEPOS_X|GLOB_EYEPOS_Y|GLOB_EYEPOS_Z|GLOB_TARGPOS_X|GLOB_TARGPOS_Y|GLOB_TARGPOS_Z|GLOB_SUN_AZIMUTH|GLOB_SUN_ALTITUDE)(?=$|\s|\^|\*\*|\/|\+|\-|\=|\&lt;|\&gt;|\&lt;\=|\&gt;\=|\&lt;\&gt;|\#)</string>
+			<key>name</key>
+			<string>keyword.gdl.globals.view</string>
 		</dict>
 		<dict>
 			<key>match</key>
@@ -208,6 +214,12 @@
 			<string>(?i)(?&lt;=^|\s|\^|\*\*|\/|\+|\-|\=|\&lt;|\&gt;|\&lt;\=|\&gt;\=|\&lt;\&gt;|\#)(SYMB_LINETYPE|SYMB_FILL|SYMB_FILL_PEN|SYMB_FBGD_PEN|SYMB_SECT_PEN|SYMB_VIEW_PEN|L_|SYMB_MAT|M_|SYMB_POS_X|X~|SYMB_POS_Y|Y~|SYMB_POS_Z|Z~|SYMB_ROTANGLE|W~|SYMB_MIRRORED|V~|SYMB_A_SIZE|SYMB_B_SIZE|SYMB_Z_SIZE)(?=$|\s|\^|\*\*|\/|\+|\-|\=|\&lt;|\&gt;|\&lt;\=|\&gt;\=|\&lt;\&gt;|\#)</string>
 			<key>name</key>
 			<string>keyword.gdl.globals.objectpara</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>(?i)(?&lt;=^|\s)(REQ|REQUEST(\{2\})?)(?=$|\s)</string>
+			<key>name</key>
+			<string>keyword.gdl.request.global</string>
 		</dict>
 		<dict>
 			<key>match</key>
