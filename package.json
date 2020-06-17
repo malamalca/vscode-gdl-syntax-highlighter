@@ -1,0 +1,35 @@
+{
+    "name": "GDLSyntaxHighlighter",
+    "displayName": "GDL Syntax Highlighter for VSCode",
+	"description": "GDL Syntax Highlighter for Visual Studio Code",
+    "publisher": "mihanahtigal",
+    "version": "0.0.1",
+    "license": "MIT",
+    "icon": "images/icons8-archicad-256.png",
+    "engines": {
+        "vscode": ">=0.9.0-pre.1"
+    },
+    "homepage": "https://github.com/malamalca/vscode-gdl-syntax-highlighter",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/malamalca/vscode-gdl-syntax-highlighter"
+	},
+	"bugs": {
+		"url": "https://github.com/malamalca/vscode-gdl-syntax-highlighter/issues"
+	},
+    "contributes": {
+        "languages": [{
+            "id": "gdl",
+            "aliases": ["GDL"],
+            "extensions": [".gdl"]
+        }],
+        "grammars": [{
+            "language": "gdl",
+            "scopeName": "text.gdl",
+            "path": "./syntaxes/gdl.tmLanguage"
+        }]
+    },
+    "__metadata": {
+		"publisherDisplayName": "Miha Nahtigal"
+	}
+}
